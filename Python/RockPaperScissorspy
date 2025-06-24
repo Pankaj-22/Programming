@@ -23,18 +23,20 @@ while True:
         continue
     comp_choice=comp_input()
     print("User select "+values[user_choice]+" and Computer select "+values[comp_choice])
-    if user_choice==2 and comp_choice==1:
-        print("***User WIN!!!")
+    if user_choice==comp_choice:
+        print(values[user_choice]+" VS "+values[comp_choice]+"\n==> It's a tie! <==")
+    elif user_choice==2 and comp_choice==1:
+        print(values[user_choice]+" VS "+values[comp_choice]+"\n==> User WIN!!! <==")
     elif user_choice==1 and comp_choice==3:
-        print("***User WIN!!!")
+        print(values[user_choice]+" VS "+values[comp_choice]+"\n==> User WIN!!! <==")
     elif user_choice==3 and comp_choice==2:
-        print("***User WIN!!!")
+        print(values[user_choice]+" VS "+values[comp_choice]+"\n==> User WIN!!! <==")
     else:
-        print("***Computer WIN!!!")
+        print(values[user_choice]+" VS "+values[comp_choice]+"\n==> Computer WIN!!! <==")
     # Ask if the user wants to play again
-    print("Do you want to play again? (Y/N)")
+    print("Press ENTER to play again? or any other key to STOP)")
     ans = input().lower()
-    if ans == 'n':
+    if ans != "":
         break
 
 print("Thanks for playing!")
